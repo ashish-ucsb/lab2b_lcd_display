@@ -1,0 +1,8 @@
+16:52:29 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/platform.d' has modification time 0.53 s in the future
+make: Nothing to be done for `all'.
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+16:52:29 Build Finished (took 172ms)
+
