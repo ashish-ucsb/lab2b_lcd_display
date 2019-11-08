@@ -142,21 +142,16 @@ void debounce(Xuint32 data,int prevstate){
 		else if(prevstate == 1){counter -= 1;}
 		else if(prevstate == 3){counter = 0;}
 		break;
-	case 7:
-		if(prevstate == 3){
-			dispatch(ENCODER_CLICK);
-			for (int j=0; j<5000; j++){};
-		}
 	}
 	switch(counter)
 	{
 	case -4:
 		counter = 0;
-		dispatch(ENCODER_DOWN);
+		xil_printf("left, ");
 		break;
 	case 4:
 		counter = 0;
-		dispatch(ENCODER_UP);
+		xil_printf("right, ");
 		break;
 	}
 	prevstate = data;

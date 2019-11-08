@@ -145,7 +145,7 @@ void debounce(Xuint32 data,int prevstate){
 	case 7:
 		if(prevstate == 3){
 			dispatch(ENCODER_CLICK);
-			for (int j=0; j<5000; j++){};
+			for (int j=0; j<5000; j++);
 		}
 	}
 	switch(counter)

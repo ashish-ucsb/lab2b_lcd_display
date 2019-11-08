@@ -2476,3 +2476,133 @@ make all
 make: Warning: File `src/bsp.d' has modification time 37 s in the future
 make: warning:  Clock skew detected.  Your build may be incomplete.
 make: Nothing to be done for `all'.
+19:11:35 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.o" -o "src/lab2a.o" "../src/lab2a.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/lab2a.c:8:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/lab2a.c:119:13: warning: 'dispatch' defined but not used [-Wunused-function]
+ static void dispatch (QSignal sig){
+             ^~~~~~~~
+Finished building: ../src/lab2a.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13936	    500	   3348	  17784	   4578	project.elf
+Finished building: project.elf.size
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+19:12:34 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 43 s in the future
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.o" -o "src/lab2a.o" "../src/lab2a.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/lab2a.c:8:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+Finished building: ../src/lab2a.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14000	    500	   3348	  17848	   45b8	project.elf
+Finished building: project.elf.size
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+19:13:04 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/lab2a.d' has modification time 13 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.
+19:25:44 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 43 s in the future
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.o" -o "src/lab2a.o" "../src/lab2a.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/lab2a.c:8:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+Finished building: ../src/lab2a.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14096	    500	   3348	  17944	   4618	project.elf
+Finished building: project.elf.size
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+19:25:51 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/lab2a.d' has modification time 35 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.
+19:28:32 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 43 s in the future
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.o" -o "src/lab2a.o" "../src/lab2a.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/lab2a.c:8:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+Finished building: ../src/lab2a.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14096	    500	   3348	  17944	   4618	project.elf
+Finished building: project.elf.size
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+19:28:41 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/lab2a.d' has modification time 34 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.
