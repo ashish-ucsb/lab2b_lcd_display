@@ -1317,3 +1317,1162 @@ make all
 make: Warning: File `src/bsp.d' has modification time 39 s in the future
 make: warning:  Clock skew detected.  Your build may be incomplete.
 make: Nothing to be done for `all'.
+18:38:53 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.
+18:44:06 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:56:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:33:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:95:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:84:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:107:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:84:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+Finished building: ../src/bsp.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13380	    496	   3348	  17224	   4348	project.elf
+Finished building: project.elf.size
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+18:46:11 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:56:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:33:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:88:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:77:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:100:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:77:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+Finished building: ../src/bsp.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/bsp.o: In function `BSP_init':
+/fs/student/ashishvyas/Downloads/Lab2B/Lab1B_handout/Lab1B/Lab1B.sdk/project/Debug/../src/bsp.c:62: undefined reference to `enc_handler'
+collect2: error: ld returned 1 exit status
+make: *** [project.elf] Error 1
+18:46:18 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/bsp.d' has modification time 36 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/bsp.c: In function 'enc_handler':
+../src/bsp.c:36:2: warning: implicit declaration of function 'debouce' [-Wimplicit-function-declaration]
+  debouce(data, prevstate);
+  ^~~~~~~
+../src/bsp.c:36:16: error: 'prevstate' undeclared (first use in this function)
+  debouce(data, prevstate);
+                ^~~~~~~~~
+../src/bsp.c:36:16: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:65:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:42:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:97:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:109:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+make: *** [src/bsp.o] Error 1
+18:46:24 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/bsp.d' has modification time 30 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/bsp.c: In function 'enc_handler':
+../src/bsp.c:36:2: warning: implicit declaration of function 'debounce'; did you mean '__bounded'? [-Wimplicit-function-declaration]
+  debounce(data, prevstate);
+  ^~~~~~~~
+  __bounded
+../src/bsp.c:36:17: error: 'prevstate' undeclared (first use in this function)
+  debounce(data, prevstate);
+                 ^~~~~~~~~
+../src/bsp.c:36:17: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:65:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:42:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:97:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:109:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+make: *** [src/bsp.o] Error 1
+18:48:52 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/bsp.c: In function 'enc_handler':
+../src/bsp.c:34:35: error: 'ENCODER_INTERRUPT' undeclared (first use in this function); did you mean 'ENCODER_UP'?
+  XGpio_DiscreteClear(&sys_enc, 1, ENCODER_INTERRUPT);
+                                   ^~~~~~~~~~~~~~~~~
+                                   ENCODER_UP
+../src/bsp.c:34:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/bsp.c:37:2: error: 'prevstate' undeclared (first use in this function)
+  prevstate = data;
+  ^~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:65:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:42:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:97:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:109:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+../src/bsp.c:113:34: error: 'ENCODER_INTERRUPT' undeclared (first use in this function); did you mean 'ENCODER_UP'?
+  XGpio_InterruptEnable(&sys_enc, ENCODER_INTERRUPT);
+                                  ^~~~~~~~~~~~~~~~~
+                                  ENCODER_UP
+make: *** [src/bsp.o] Error 1
+18:49:02 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/bsp.c: In function 'enc_handler':
+../src/bsp.c:37:2: error: 'prevstate' undeclared (first use in this function)
+  prevstate = data;
+  ^~~~~~~~~
+../src/bsp.c:37:2: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:65:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:42:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:97:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:109:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+make: *** [src/bsp.o] Error 1
+18:49:15 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/bsp.c: In function 'enc_handler':
+../src/bsp.c:37:2: error: 'prevstate' undeclared (first use in this function)
+  prevstate = data;
+  ^~~~~~~~~
+../src/bsp.c:37:2: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:65:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:42:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:97:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:109:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+make: *** [src/bsp.o] Error 1
+18:49:33 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:65:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:42:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:97:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:109:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+Finished building: ../src/bsp.c
+ 
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.o" -o "src/lab2a.o" "../src/lab2a.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/lab2a.c:8:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+Finished building: ../src/lab2a.c
+ 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/main.c:6:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13340	    496	   3348	  17184	   4320	project.elf
+Finished building: project.elf.size
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+18:49:43 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/main.d' has modification time 34 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:65:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:42:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:97:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:109:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+Finished building: ../src/bsp.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13340	    496	   3348	  17184	   4320	project.elf
+Finished building: project.elf.size
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+18:49:55 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/main.d' has modification time 21 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.
+18:50:02 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/main.d' has modification time 15 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.
+18:50:34 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:65:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:42:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:97:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:109:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+Finished building: ../src/bsp.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13380	    496	   3348	  17224	   4348	project.elf
+Finished building: project.elf.size
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+18:50:47 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/bsp.d' has modification time 30 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.
+18:50:56 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/bsp.d' has modification time 20 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.
+18:52:26 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:65:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:42:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:97:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:109:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+Finished building: ../src/bsp.c
+ 
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.o" -o "src/lab2a.o" "../src/lab2a.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/lab2a.c:8:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+Finished building: ../src/lab2a.c
+ 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/main.c:6:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13380	    496	   3348	  17224	   4348	project.elf
+Finished building: project.elf.size
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+18:52:40 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/main.d' has modification time 29 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/bsp.c: In function 'enc_handler':
+../src/bsp.c:37:2: warning: implicit declaration of function 'debounce'; did you mean '__bounded'? [-Wimplicit-function-declaration]
+  debounce(data, prevstate);
+  ^~~~~~~~
+  __bounded
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:66:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:43:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:98:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:87:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:110:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:87:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+Finished building: ../src/bsp.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/bsp.o: In function `enc_handler':
+/fs/student/ashishvyas/Downloads/Lab2B/Lab1B_handout/Lab1B/Lab1B.sdk/project/Debug/../src/bsp.c:37: undefined reference to `debounce'
+collect2: error: ld returned 1 exit status
+make: *** [project.elf] Error 1
+18:56:15 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/bsp.c: In function 'enc_handler':
+../src/bsp.c:36:2: warning: implicit declaration of function 'debounce'; did you mean '__bounded'? [-Wimplicit-function-declaration]
+  debounce(data, prevstate);
+  ^~~~~~~~
+  __bounded
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:65:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:42:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:97:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:109:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+Finished building: ../src/bsp.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/bsp.o: In function `enc_handler':
+/fs/student/ashishvyas/Downloads/Lab2B/Lab1B_handout/Lab1B/Lab1B.sdk/project/Debug/../src/bsp.c:36: undefined reference to `debounce'
+collect2: error: ld returned 1 exit status
+make: *** [project.elf] Error 1
+18:57:24 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.o" -o "src/lab2a.o" "../src/lab2a.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/lab2a.c:8:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/lab2a.c: In function 'debounce':
+../src/lab2a.c:32:24: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void Lab2A_ctor(void)  {
+                        ^
+../src/lab2a.c:38:33: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ QState Lab2A_initial(Lab2A *me) {
+                                 ^
+../src/lab2a.c:43:28: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ QState Lab2A_on(Lab2A *me) {
+                            ^
+../src/lab2a.c:61:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ QState Lab2A_stateA(Lab2A *me) {
+                                ^
+../src/lab2a.c:89:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ QState Lab2A_stateB(Lab2A *me) {
+                                ^
+../src/lab2a.c:117:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void debounce(Xuint32 data,int prevstate){
+                                          ^
+../src/lab2a.c:25:6: error: old-style parameter declarations in prototyped function definition
+ void debounce(Xuint32 data,int prevstate)
+      ^~~~~~~~
+../src/lab2a.c:152:1: error: expected '{' at end of input
+ }
+ ^
+../src/lab2a.c: At top level:
+../src/lab2a.c:21:15: warning: 'Lab2A_initial' declared 'static' but never defined [-Wunused-function]
+ static QState Lab2A_initial (Lab2A *me);
+               ^~~~~~~~~~~~~
+../src/lab2a.c:22:15: warning: 'Lab2A_on' declared 'static' but never defined [-Wunused-function]
+ static QState Lab2A_on      (Lab2A *me);
+               ^~~~~~~~
+../src/lab2a.c:23:15: warning: 'Lab2A_stateA' declared 'static' but never defined [-Wunused-function]
+ static QState Lab2A_stateA  (Lab2A *me);
+               ^~~~~~~~~~~~
+../src/lab2a.c:24:15: warning: 'Lab2A_stateB' declared 'static' but never defined [-Wunused-function]
+ static QState Lab2A_stateB  (Lab2A *me);
+               ^~~~~~~~~~~~
+make: *** [src/lab2a.o] Error 1
+18:59:06 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.o" -o "src/lab2a.o" "../src/lab2a.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/lab2a.c:8:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/lab2a.c: In function 'debounce':
+../src/lab2a.c:32:24: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void Lab2A_ctor(void)  {
+                        ^
+../src/lab2a.c:38:33: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ QState Lab2A_initial(Lab2A *me) {
+                                 ^
+../src/lab2a.c:43:28: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ QState Lab2A_on(Lab2A *me) {
+                            ^
+../src/lab2a.c:61:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ QState Lab2A_stateA(Lab2A *me) {
+                                ^
+../src/lab2a.c:89:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ QState Lab2A_stateB(Lab2A *me) {
+                                ^
+../src/lab2a.c:117:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void debounce(Xuint32 data,int prevstate){
+                                          ^
+../src/lab2a.c:25:6: error: old-style parameter declarations in prototyped function definition
+ void debounce(Xuint32 data,int prevstate)
+      ^~~~~~~~
+../src/lab2a.c:152:1: error: expected '{' at end of input
+ }
+ ^
+../src/lab2a.c: At top level:
+../src/lab2a.c:21:15: warning: 'Lab2A_initial' declared 'static' but never defined [-Wunused-function]
+ static QState Lab2A_initial (Lab2A *me);
+               ^~~~~~~~~~~~~
+../src/lab2a.c:22:15: warning: 'Lab2A_on' declared 'static' but never defined [-Wunused-function]
+ static QState Lab2A_on      (Lab2A *me);
+               ^~~~~~~~
+../src/lab2a.c:23:15: warning: 'Lab2A_stateA' declared 'static' but never defined [-Wunused-function]
+ static QState Lab2A_stateA  (Lab2A *me);
+               ^~~~~~~~~~~~
+../src/lab2a.c:24:15: warning: 'Lab2A_stateB' declared 'static' but never defined [-Wunused-function]
+ static QState Lab2A_stateB  (Lab2A *me);
+               ^~~~~~~~~~~~
+make: *** [src/lab2a.o] Error 1
+18:59:24 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 43 s in the future
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.o" -o "src/lab2a.o" "../src/lab2a.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/lab2a.c:8:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/lab2a.c: In function 'debounce':
+../src/lab2a.c:122:22: error: 'counter' undeclared (first use in this function); did you mean 'toupper'?
+   if(prevstate == 1){counter += 1;}
+                      ^~~~~~~
+                      toupper
+../src/lab2a.c:122:22: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/lab2a.o] Error 1
+19:00:00 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.o" -o "src/lab2a.o" "../src/lab2a.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/lab2a.c:8:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+Finished building: ../src/lab2a.c
+ 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/main.c:6:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13976	    500	   3348	  17824	   45a0	project.elf
+Finished building: project.elf.size
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+19:00:08 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/main.d' has modification time 35 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.
+19:00:15 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/main.d' has modification time 29 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.
+19:01:04 **** Auto Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/subdir.mk' has modification time 42 s in the future
+Building file: ../src/bsp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bsp.o" -I../../project_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bsp.d" -MT"src/bsp.o" -o "src/bsp.o" "../src/bsp.c"
+In file included from ../src/qpn_port.h:38:0,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xbasic_types.h:111:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../project_bsp/microblaze_0/include/xbasic_types.h:112:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/bsp.c: In function 'enc_handler':
+../src/bsp.c:36:2: warning: implicit declaration of function 'debounce'; did you mean '__bounded'? [-Wimplicit-function-declaration]
+  debounce(data, prevstate);
+  ^~~~~~~~
+  __bounded
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'BSP_init':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:65:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:42:6: note: declared here
+ void BSP_init(void) {
+      ^~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../src/bsp.c: In function 'QF_onStartup':
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:97:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+In file included from ../../project_bsp/microblaze_0/include/xgpio.h:131:0,
+                 from ../src/qpn_port.h:34,
+                 from ../src/bsp.c:7:
+../../project_bsp/microblaze_0/include/xstatus.h:61:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/bsp.c:109:12: note: in expansion of macro 'XST_FAILURE'
+     return XST_FAILURE;
+            ^~~~~~~~~~~
+../src/bsp.c:86:6: note: declared here
+ void QF_onStartup(void) {                 /* entered with interrupts locked */
+      ^~~~~~~~~~~~
+Finished building: ../src/bsp.c
+ 
+Building target: project.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project.elf"  ./src/bsp.o ./src/fonts.o ./src/lab2a.o ./src/lcd.o ./src/main.o ./src/platform.o ./src/qepn.o ./src/qfn.o ./src/qfn_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13936	    500	   3348	  17784	   4578	project.elf
+Finished building: project.elf.size
+ 
+make: warning:  Clock skew detected.  Your build may be incomplete.
+19:01:10 **** Incremental Build of configuration Debug for project project ****
+make all 
+make: Warning: File `src/bsp.d' has modification time 37 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.

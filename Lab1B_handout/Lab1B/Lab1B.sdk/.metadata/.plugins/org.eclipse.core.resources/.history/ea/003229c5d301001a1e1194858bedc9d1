@@ -22,10 +22,9 @@ static QState Lab2A_initial (Lab2A *me);
 static QState Lab2A_on      (Lab2A *me);
 static QState Lab2A_stateA  (Lab2A *me);
 static QState Lab2A_stateB  (Lab2A *me);
-void debounce(Xuint32 data,int prevstate);
+void debounce(Xuint32 data,int prevstate)
 /**********************************************************************/
 
-int counter = 0;
 
 Lab2A AO_Lab2A;
 
@@ -141,13 +140,14 @@ void debounce(Xuint32 data,int prevstate){
 	{
 	case -4:
 		counter = 0;
-		xil_printf("left, ");
+		LED_left();
 		break;
 	case 4:
 		counter = 0;
-		xil_printf("right, ");
+		LED_right();
 		break;
 	}
 	prevstate = data;
+	XGpio_DiscreteWrite(&GpioWhite, LED_CHANNEL, ledid[position]);
 }
 

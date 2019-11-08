@@ -16,6 +16,8 @@
 
 #define GPIO_CHANNEL1 1
 
+u32 data;
+
 void debounceInterrupt(); // Write This function
 void enc_handler();
 
@@ -26,14 +28,12 @@ static XGpio sys_enc;
 //static XGpio sys_lcd;
 // Suggest Creating two int's to use for determining the direction of twist
 int ccw, cw;
-int prevstate = 3;
-Xuint32 data;
 
 void enc_handler() {
 	data = XGpio_DiscreteRead(&sys_enc, 1);
 	XGpio_DiscreteClear(&sys_enc, 1, ENCODER_INTERRUPT);
 //	xil_printf("%d, ", data);
-	debounce(data, prevstate);
+//	debounce(data, prevstate);
 	prevstate = data;
 	XGpio_InterruptClear(&sys_enc, ENCODER_INTERRUPT);
 }

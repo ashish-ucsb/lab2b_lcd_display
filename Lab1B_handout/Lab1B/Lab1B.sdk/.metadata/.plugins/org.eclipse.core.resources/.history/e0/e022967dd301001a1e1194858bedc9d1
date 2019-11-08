@@ -22,10 +22,10 @@ static QState Lab2A_initial (Lab2A *me);
 static QState Lab2A_on      (Lab2A *me);
 static QState Lab2A_stateA  (Lab2A *me);
 static QState Lab2A_stateB  (Lab2A *me);
-void debounce(Xuint32 data,int prevstate);
+
+
 /**********************************************************************/
 
-int counter = 0;
 
 Lab2A AO_Lab2A;
 
@@ -113,41 +113,5 @@ QState Lab2A_stateB(Lab2A *me) {
 
 	return Q_SUPER(&Lab2A_on);
 
-}
-
-void debounce(Xuint32 data,int prevstate){
-
-	switch (data)
-	{
-	case 0:
-		if(prevstate == 1){counter += 1;}
-		else if(prevstate == 2){counter -= 1;}
-		break;
-	case 1:
-		if(prevstate == 3){counter += 1;}
-		else if(prevstate == 0){counter -= 1;}
-		break;
-	case 2:
-		if(prevstate == 0){counter += 1;}
-		else if(prevstate == 3){counter -= 1;}
-		break;
-	case 3:
-		if(prevstate == 2){counter += 1;}
-		else if(prevstate == 1){counter -= 1;}
-		else if(prevstate == 3){counter = 0;}
-		break;
-	}
-	switch(counter)
-	{
-	case -4:
-		counter = 0;
-		xil_printf("left, ");
-		break;
-	case 4:
-		counter = 0;
-		xil_printf("right, ");
-		break;
-	}
-	prevstate = data;
 }
 

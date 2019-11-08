@@ -19,8 +19,6 @@ void ISR_timer(void);
 
 #define ENCODER_INTERRUPT XGPIO_IR_MASK
 
-extern int prevstate;
-
 
 #endif                                                             /* bsp_h */
 

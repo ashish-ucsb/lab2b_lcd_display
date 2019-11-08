@@ -25,7 +25,6 @@ static QState Lab2A_stateB  (Lab2A *me);
 void debounce(Xuint32 data,int prevstate);
 /**********************************************************************/
 
-int counter = 0;
 
 Lab2A AO_Lab2A;
 

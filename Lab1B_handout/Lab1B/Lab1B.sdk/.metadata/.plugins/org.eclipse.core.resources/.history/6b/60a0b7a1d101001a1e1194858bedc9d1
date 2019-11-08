@@ -19,24 +19,11 @@
 void debounceInterrupt(); // Write This function
 void enc_handler();
 
-// Create ONE interrupt controllers XIntc
-XIntc sys_intc;
+XIntc sys_intc; 	// Create ONE interrupt controllers XIntc
 // Create two static XGpio variables
 static XGpio sys_enc;
 //static XGpio sys_lcd;
-// Suggest Creating two int's to use for determining the direction of twist
-int ccw, cw;
-int prevstate = 3;
-Xuint32 data;
-
-void enc_handler() {
-	data = XGpio_DiscreteRead(&sys_enc, 1);
-	XGpio_DiscreteClear(&sys_enc, 1, ENCODER_INTERRUPT);
-//	xil_printf("%d, ", data);
-	debounce(data, prevstate);
-	prevstate = data;
-	XGpio_InterruptClear(&sys_enc, ENCODER_INTERRUPT);
-}
+int ccw, cw; 		// Suggest Creating two int's to use for determining the direction of twist
 
 /*..........................................................................*/
 void BSP_init(void) {
@@ -82,13 +69,24 @@ void BSP_init(void) {
 	// Twist Knob
 }
 
+void enc_handler() {
+	u32 data;
+	data = XGpio_DiscreteRead(&sys_enc, 1);
+	XGpio_DiscreteClear(&sys_enc, 1, XGPIO_IR_MASK);
+	xil_printf("%d, ", data);
+	XGpio_InterruptClear(&sys_enc, XGPIO_IR_MASK);
+}
+
 /*..........................................................................*/
 void QF_onStartup(void) {                 /* entered with interrupts locked */
 
 	/* Enable interrupts */
 	xil_printf("\n\rQF_onStartup\n"); // Comment out once you are in your complete program
 
-	// Start interrupt controller
+	// Press Knob
+	// Enable interrupt controller
+
+	// Start interupt controller
 	XStatus Status;
 	Status = XIntc_Start(&sys_intc, XIN_REAL_MODE);
 	if ( Status != XST_SUCCESS )
@@ -97,7 +95,9 @@ void QF_onStartup(void) {                 /* entered with interrupts locked */
 		return XST_FAILURE;
 	}
 
-	// Enable interrupt controller
+	/*
+	 * Enable the interrupt for the timer counter
+	 */
 	XIntc_Enable(&sys_intc, XPAR_MICROBLAZE_0_AXI_INTC_ENCODER_IP2INTC_IRPT_INTR);
 
 	/*
@@ -110,7 +110,7 @@ void QF_onStartup(void) {                 /* entered with interrupts locked */
 		}
 
 	// Enable interrupt on the GPIO
-	XGpio_InterruptEnable(&sys_enc, ENCODER_INTERRUPT);
+	XGpio_InterruptEnable(&sys_enc, XGPIO_IR_MASK);
 	xil_printf("Initialized Encoder!\r\n");
 
 	// Global enable of interrupt
