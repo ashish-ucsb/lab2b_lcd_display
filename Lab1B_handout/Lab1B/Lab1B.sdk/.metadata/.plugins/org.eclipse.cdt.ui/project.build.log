@@ -1,8 +1,8 @@
-16:52:29 **** Incremental Build of configuration Debug for project project ****
+18:28:59 **** Incremental Build of configuration Debug for project project ****
 make all 
-make: Warning: File `src/platform.d' has modification time 0.53 s in the future
-make: Nothing to be done for `all'.
+make: Warning: File `src/bsp.d' has modification time 39 s in the future
 make: warning:  Clock skew detected.  Your build may be incomplete.
+make: Nothing to be done for `all'.
 
-16:52:29 Build Finished (took 172ms)
+18:28:59 Build Finished (took 111ms)
 
